@@ -1,0 +1,11 @@
+<h1>Sharing your experience</h1>
+
+<h2>Event</h2>
+<ul>
+  <%@events.each do |event|%>
+    <li><%=event.name%>: <%=event.details%></li>
+  <%end%>
+
+</ul>
+
+<%=link_to "new", events_new_path%>
