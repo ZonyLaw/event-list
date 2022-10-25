@@ -3,9 +3,15 @@
 <h2>Event</h2>
 <ul>
   <%@events.each do |event|%>
-    <li><%=event.name%>: <%=event.details%></li>
+    <li>
+      <%=event.name%>: <%=event.details%> |
+      <%=link_to "details", event_path(event)%> |
+      <%=link_to "update", edit_event_path(event)%> |
+    </li>
   <%end%>
 
 </ul>
 
-<%=link_to "new", events_new_path%>
+<div>
+  <%=link_to "new", new_event_path%>
+</div>

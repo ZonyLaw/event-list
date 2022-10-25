@@ -1,0 +1,9 @@
+<h1>Here is your event</h1>
+<h3><%=@event.name%></h3>
+
+<p>
+<%=@event.details%>
+</p>
+
+<%=link_to "Back to index", events_path%> | <%=link_to "Edit", edit_event_path%> |
+<%=link_to "Delete", event_path(@event), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
